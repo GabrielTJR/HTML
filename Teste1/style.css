@@ -1,0 +1,10 @@
+h1{
+    font: normal 30pt Arial;
+    color: white;
+}
+
+body{
+    background-image: url('Back-1200.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
