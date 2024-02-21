@@ -22,10 +22,9 @@
     font-size: 1em;
 }
 
-body{
+html, body{
     min-height: 100vh;
     background-color: darkgray;
-    font-family: var(--fonte1);
 }
 
 header{
@@ -96,6 +95,7 @@ section.normal{
 
 footer{
     background-color: black;
+    font-family: var(--fonte1);
     color: white;
     text-align: center;
     font-style: italic;
