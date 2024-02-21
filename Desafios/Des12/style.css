@@ -22,7 +22,7 @@
     font-size: 1em;
 }
 
-html, body{
+body{
     min-height: 100vh;
     background-color: darkgray;
 }
@@ -54,6 +54,11 @@ a:hover{
     text-decoration: underline;
 }
 
+main{
+    max-width: 800px;
+    margin: auto;
+}
+
 section{
     font-family: var(--fonte3);
     padding-top: 10vh;
@@ -76,6 +81,7 @@ section.normal{
     background-size: 100% 100%;
     background-attachment: fixed;
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
 }
 
 .imagem > p{
