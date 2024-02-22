@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Celestina';
+    src: url(fontes/Celestina.ttf) format('truetype');
+}
+
+:root{
+    --font1: 'Celestina', serif;
+}
+
+body{
+    background-color: pink;
+    color: white;
+}
+
+h1{
+    font-family: var(--font1);
+    text-align: center;
+    font-size: 2.5em;
+}
