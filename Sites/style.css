@@ -5,6 +5,11 @@
     src: url(fontes/Celestina.ttf) format('truetype');
 }
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 :root{
     --font1: 'Celestina', serif;
 }
@@ -14,8 +19,26 @@ body{
     color: white;
 }
 
-h1{
+section{
     font-family: var(--font1);
+    width: auto;
+}
+
+h1{
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
+}
+
+img{
+    margin: auto;
+    display: block;
+}
+
+footer{
+    background-color: violet;
+    font: 400 italic 0.8em Arial;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    bottom: -1px;
 }
