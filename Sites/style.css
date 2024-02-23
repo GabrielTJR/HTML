@@ -50,10 +50,6 @@ div#foto{
     box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
 }
 
-audio{
-    contain: content;
-}
-
 section{
     font-family: var(--font1);
     width: auto;
