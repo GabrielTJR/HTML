@@ -38,6 +38,22 @@ h2{
     font-size: 3.5vw;
 }
 
+#foto:active{
+    background-image: url(imagens/foto1.jpg);
+}
+
+div#foto{
+    margin: auto;
+    height: 270px;
+    width: 200px;
+    background-image: url(imagens/cortina.jpg);
+    box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
+}
+
+audio{
+    contain: content;
+}
+
 section{
     font-family: var(--font1);
     width: auto;
@@ -50,18 +66,6 @@ section p{
 img{
     margin: auto;
     display: block;
-}
-
-#foto:active{
-    background-image: url(imagens/foto1.jpg);
-}
-
-div#foto{
-    margin: auto;
-    height: 270px;
-    width: 200px;
-    background-image: url(imagens/cortina.jpg);
-    box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
 }
 
 div.text{
