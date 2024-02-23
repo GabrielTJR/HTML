@@ -11,7 +11,7 @@
 }
 
 :root{
-    --font1: 'Celestina', serif;
+    --font1: 'Love', serif;
 }
 
 body{
@@ -19,34 +19,49 @@ body{
     color: white;
 }
 
+header{
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 0px black;
+    font-family: var(--font1);
+}
+
+h1{
+    font-size: 5vw;
+}
+
+h2{
+    font-size: 3.5vw;
+}
+
 section{
     font-family: var(--font1);
     width: auto;
-    text-align: center;
-    text-shadow: 1px 1px 0px black;
-}
-
-h1, h2{
-    padding: 5px;
-    margin: 5px;
-    font-size: 2em;
 }
 
 section p{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 img{
     margin: auto;
     display: block;
-    margin: 10px;
 }
 
-div{
+div#foto{
     margin: auto;
     height: 270px;
     width: 200px;
     background-image: url(imagens/cortina.jpg);
+}
+
+.text{
+    background-color: white;
+    color:black;
+    margin-top: 10px;
+    padding: 10px;
+    text-shadow: none;
 }
 
 #foto:active{
