@@ -25,11 +25,13 @@ header{
     text-align: center;
     text-shadow: 1px 1px 0px black;
     font-family: var(--font1);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 h1{
     font-size: 5vw;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 h2{
@@ -50,6 +52,10 @@ img{
     display: block;
 }
 
+#foto:active{
+    background-image: url(imagens/foto1.jpg);
+}
+
 div#foto{
     margin: auto;
     height: 270px;
@@ -58,9 +64,7 @@ div#foto{
     box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
 }
 
-.text{
-    background-color: white;
-    color:black;
+div.text{
     margin-top: 30px;
     padding: 30px;
     text-shadow: none;
@@ -68,8 +72,41 @@ div#foto{
     font-size: 2.5vw;
 }
 
-#foto:active{
-    background-image: url(imagens/foto1.jpg);
+div p{
+    padding: 10px;
+}
+
+.semfoto{
+    background-color: white;
+    color:black;
+}
+
+.foto{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.486);
+}
+
+.foto#foto1{
+    background-image: url(imagens/foto5.jpg);
+}
+
+.foto#foto2{
+    background-image: url(imagens/foto2.jpg);
+}
+
+img{
+    background-color: black;
+    background-size: cover;
+}
+
+h1#end{
+    background-image: url(imagens/foto3.jpg);
+    background-size: cover;
+    height: 98vw;
+    text-shadow: 2px 2px 0px black;
 }
 
 footer{
