@@ -10,11 +10,13 @@
 <body>
     <header>
         <h1>&#128147;Para a mais linda de todas&#128147;</h1>
-        <h2>Segure para revelar</h2>
     </header>
     <section>
-        <div id="foto" onclick='desaparece()'></div>
-        <input type="button" value="click" onclick="desaparece()" id="botao">
+        <div id="container">
+            <input type="button" value="Voltar" onclick="voltar()" id="botao">
+            <div id="foto" onclick='desaparece()'></div>
+            <input type="button" value="Avançar" onclick="avancar()" id="botao">
+        </div>
         <audio src="musica/iguaria.mp3" type="audio/mpeg"></audio>
         <div class="text semfoto">
             <p>

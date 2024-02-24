@@ -43,18 +43,31 @@ h2{
 }
 
 input{
-    display: block;
+    display: inline-block;
     margin: 0 auto;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+input:hover{
+    text-decoration: underline;
+}
+
+div#container{
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 
 div#foto{
-    margin: auto;
     height: 270px;
     width: 200px;
     background-size: cover;
     background-position: center center;
-    /*background-image: url(imagens/cortina.jpg);*/
+    background-image: url(imagens/cortina.jpg);
     box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
+    display: inline-block;
 }
 
 section{
