@@ -38,10 +38,6 @@ h2{
     font-size: 3.5vw;
 }
 
-#foto:active{
-    /*background-image: url(imagens/foto1.jpg);*/
-}
-
 input{
     display: inline-block;
     margin: 0 auto;
@@ -68,6 +64,8 @@ div#foto{
     background-image: url(imagens/cortina.jpg);
     box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.541);
     display: inline-block;
+    border-radius: 15%;
+    transition: opacity 0.3s ease-in-out;
 }
 
 section{
