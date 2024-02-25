@@ -105,6 +105,11 @@ div p{
     background-attachment: fixed;
     color: white;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.486);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.foto > p{
+    text-shadow: 1px 1px 0px black;
 }
 
 .foto#foto1{
