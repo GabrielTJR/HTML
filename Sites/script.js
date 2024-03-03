@@ -27,7 +27,9 @@ function voltar(){
     }, 300);  
 }
 
-/*setInterval(function() {
+
+
+setInterval(function() {
     indiceAtual = (indiceAtual + 1) % imagensFundo.length;
     const proximaImagemURL = imagensFundo[indiceAtual];
     fototext1.style.opacity = 0;
@@ -35,4 +37,4 @@ function voltar(){
         fototext1.style.backgroundImage = `url('${proximaImagemURL}')`,
         fototext1.style.opacity = 1;
     }, 300);
-}, 5000);*/
+}, 5000);
