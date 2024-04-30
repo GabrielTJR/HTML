@@ -134,17 +134,22 @@
                 if (i === start) {
                     node.style.backgroundColor = 'red';
                 }
-                div.appendChild(node);
-
-                graph[i].forEach(neighbor => {
-                    const edge = document.createElement('div');
-                    edge.style.width = '20px';
-                    edge.style.height = '1px';
-                    edge.style.backgroundColor = 'black';
-                    edge.style.display = 'inline-block';
-                    div.appendChild(edge);
-                });
             }
+            div.appendChild(node);
+
+            graph[i].forEach(neighbor => {
+                const edge = document.createElement('div');
+                edge.style.width = '20px';
+                edge.style.height = '1px';
+                edge.style.backgroundColor = 'black';
+                edge.style.display = 'inline-block';
+                div.appendChild(edge);
+
+                // Adiciona espaçamento entre os vizinhos
+                if (neighbor === start) {
+                    edge.style.marginLeft = '5px';
+                }
+            });
         }
     </script>
 </body>
