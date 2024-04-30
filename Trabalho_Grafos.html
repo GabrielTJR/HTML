@@ -42,10 +42,7 @@
             const order = parseInt(document.getElementById('order').value);
             const start = parseInt(document.getElementById('start').value) - 1;
             const Raiz = Math.sqrt(order);
-            if(Raiz.isInteger()){
-                const order = parseInt(document.getElementById('order').value);
-                const start = parseInt(document.getElementById('start').value) - 1;
-    
+            if(Number.isInteger(Raiz)){    
                 const sudoku = generateSudokuGrid(order);
                 const graph = generateGraph(order);
     
