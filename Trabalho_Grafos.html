@@ -41,12 +41,17 @@
         function generateSudoku() {
             const order = parseInt(document.getElementById('order').value);
             const start = parseInt(document.getElementById('start').value) - 1;
-
-            const sudoku = generateSudokuGrid(order);
-            const graph = generateGraph(order);
-
-            drawSudoku(sudoku);
-            drawGraph(graph, start);
+            if(Math.sqrt(order).isInteger() == true){
+                const order = parseInt(document.getElementById('order').value);
+                const start = parseInt(document.getElementById('start').value) - 1;
+    
+                const sudoku = generateSudokuGrid(order);
+                const graph = generateGraph(order);
+    
+                drawSudoku(sudoku);
+                drawGraph(graph, start);
+            }else{
+                alert('Digite um número com raiz inteira para a ordem da matriz');
         }
 
         function generateSudokuGrid(order) {
