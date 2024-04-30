@@ -41,7 +41,8 @@
         function generateSudoku() {
             const order = parseInt(document.getElementById('order').value);
             const start = parseInt(document.getElementById('start').value) - 1;
-            if(Math.sqrt(order).isInteger() == true){
+            const Raiz = Math.sqrt(order);
+            if(Raiz.isInteger()){
                 const order = parseInt(document.getElementById('order').value);
                 const start = parseInt(document.getElementById('start').value) - 1;
     
