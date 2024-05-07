@@ -32,3 +32,10 @@ table, th, td{
     white-space: nowrap;
     margin-bottom: 10px;
 }
+
+#graph {
+    width: 600px;
+    height: 600px;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+}
