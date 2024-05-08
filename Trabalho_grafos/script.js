@@ -117,7 +117,7 @@ function createSudokuGraph(ordem, LinhaIni, ColunaIni) {
     }
 
     return grid;
-}*/
+}
 
 // Colorir os vértices
     /*var colorido = {};
@@ -145,6 +145,19 @@ function createSudokuGraph(ordem, LinhaIni, ColunaIni) {
                 colorFound = true;
             }
         }
-    });*/
+    });
 
-    
+    function drawSudoku(grid) {
+    const table = document.getElementById('sudoku');
+    table.innerHTML = '';
+
+    for (let i = 0; i < grid.length; i++) {
+        const row = document.createElement('tr');
+        for (let j = 0; j < grid[i].length; j++) {
+            const cell = document.createElement('td');
+            cell.textContent = grid[i][j];
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+}*/
