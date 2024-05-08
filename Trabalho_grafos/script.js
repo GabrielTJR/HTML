@@ -11,26 +11,6 @@ function generateSudoku() {
     }
 }
 
-function generateSudokuGrid(order) {
-    const grid = [];
-    const subgridSize = Math.sqrt(order);
-    let num = 1;
-
-    // Gera um sudoku com distribuição começando da primeira linha e primeira coluna
-    for (let i = 0; i < order; i++) {
-        const row = [];
-        for (let j = 0; j < order; j++) {
-            const value = (i * subgridSize + Math.floor(i / subgridSize) + j) % order + 1;
-            row.push(value);
-            num = value;
-        }
-        num = (num + subgridSize) % order + 1;
-        grid.push(row);
-    }
-
-    return grid;
-}
-
 function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
     var tamanho = sudoku.length;
     var nos = [];
@@ -48,6 +28,7 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
         }
     }
 
+    // Enumera o grafo com as regras do sudoku
     function findNodeById(nodeId) {
         return nos.find(function(node) {
             return node.id === nodeId;
@@ -97,8 +78,48 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
             }
         }
     }
-    
-    // Colorir os vértices
+
+    // Colorir o grafo
+    nos.forEach(function(node) {
+        node.color = { background: "hsl(" + (360 * node.label / tamanho) + ",100%,70%)" };
+    });
+
+    // Opções de configuração do grafo
+    var options = {
+        physics: false,
+        nos: {
+            shape: "circle",
+            tamanho: 20
+        }
+    };
+
+    // Criação do grafo
+    var container = document.getElementById('grafo');
+    var data = { nodes: nos, edges: arestas };
+    var network = new vis.Network(container, data, options);
+}
+
+/*function generateSudokuGrid(order) {
+    const grid = [];
+    const subgridSize = Math.sqrt(order);
+    let num = 1;
+
+    // Gera um sudoku com distribuição começando da primeira linha e primeira coluna
+    for (let i = 0; i < order; i++) {
+        const row = [];
+        for (let j = 0; j < order; j++) {
+            const value = (i * subgridSize + Math.floor(i / subgridSize) + j) % order + 1;
+            row.push(value);
+            num = value;
+        }
+        num = (num + subgridSize) % order + 1;
+        grid.push(row);
+    }
+
+    return grid;
+}*/
+
+// Colorir os vértices
     /*var colorido = {};
     nos.forEach(function(node) {
         var id = node.id;
@@ -125,23 +146,3 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
             }
         }
     });*/
-
-    // Colorir o grafo
-    nos.forEach(function(node) {
-        node.color = { background: "hsl(" + (360 * node.label / tamanho) + ",100%,70%)" };
-    });
-
-    // Opções de configuração do grafo
-    var options = {
-        physics: false,
-        nos: {
-            shape: "circle",
-            tamanho: 20
-        }
-    };
-
-    // Criação do grafo
-    var container = document.getElementById('grafo');
-    var data = { nodes: nos, edges: arestas };
-    var network = new vis.Network(container, data, options);
-}
