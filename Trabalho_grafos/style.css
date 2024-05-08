@@ -1,41 +1,11 @@
 @charset "UTF-8";
 
-table {
-    border-collapse: collapse;
-    width: 500px;
-    height: 500px;
-}
-table, th, td{
-    border: 1px solid black;
-    text-align: center;
-}
-.graph-node {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 1px solid black;
-    display: inline-block;
-    margin-right: 5px;
-    text-align: center;
-    line-height: 20px;
+input {
+    width: 80px;
 }
 
-.graph-edge {
-    width: 20px;
-    height: 1px;
-    background-color: black;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.node-container {
-    white-space: nowrap;
-    margin-bottom: 10px;
-}
-
-#graph {
+#grafo {
     width: 600px;
     height: 600px;
     border: 1px solid lightgray;
-    margin: 0 auto;
 }
