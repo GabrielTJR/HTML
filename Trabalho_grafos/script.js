@@ -3,11 +3,11 @@ function generateSudoku() {
     const LinhaIni = parseInt(document.getElementById('LinhaIni').value) - 1;
     const ColunaIni = parseInt(document.getElementById('ColunaIni').value) - 1;
     const Raiz = Math.sqrt(ordem);
-    if(Number.isInteger(Raiz)){
+    if(Number.isInteger(Raiz) && ordem <16 && ordem>0){
         createSudokuGraph(ordem, LinhaIni, ColunaIni);
         
     }else{
-        alert('Digite um número com raiz inteira para a ordem da matriz');
+        alert('Digite um número válido e com raiz inteira para a ordem da matriz');
     }
 }
 
