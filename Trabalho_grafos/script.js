@@ -11,8 +11,8 @@ function generateSudoku() {
     }
 }
 
-function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
-    var tamanho = sudoku.length;
+function createSudokuGraph(ordem, LinhaIni, ColunaIni) {
+    var tamanho = ordem;
     var nos = [];
     var arestas = [];
     const subgridSize = Math.sqrt(ordem);
@@ -21,7 +21,7 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
     for (var i = 0; i < tamanho; i++) {
         for (var j = 0; j < tamanho; j++) {
             var id = i * tamanho + j;
-            var label = sudoku[i][j] !== 0 ? sudoku[i][j].toString() : '';
+            var label = '';
             var x = (j + 1) * 100;
             var y = (i + 1) * 100;
             nos.push({ id: id, label: label, x: x, y: y});
@@ -146,3 +146,5 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
             }
         }
     });*/
+
+    
