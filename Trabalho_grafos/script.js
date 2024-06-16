@@ -3,7 +3,7 @@ function generateSudoku() {
     const LinhaIni = parseInt(document.getElementById('LinhaIni').value) - 1;
     const ColunaIni = parseInt(document.getElementById('ColunaIni').value) - 1;
     const Raiz = Math.sqrt(ordem);
-    if(Number.isInteger(Raiz) && ordem <16 && ordem>0){
+    if(Number.isInteger(Raiz) && ordem <=16 && ordem>0){
         createSudokuGraph(ordem, LinhaIni, ColunaIni);
         
     }else{
