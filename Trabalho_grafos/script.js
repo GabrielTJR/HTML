@@ -3,16 +3,16 @@ function generateSudoku() {
     const LinhaIni = parseInt(document.getElementById('LinhaIni').value) - 1;
     const ColunaIni = parseInt(document.getElementById('ColunaIni').value) - 1;
     const Raiz = Math.sqrt(ordem);
-    if(Number.isInteger(Raiz)){
+    if(Number.isInteger(Raiz) && ordem <=16 && ordem>0){
         createSudokuGraph(ordem, LinhaIni, ColunaIni);
         
     }else{
-        alert('Digite um número com raiz inteira para a ordem da matriz');
+        alert('Digite um número válido e com raiz inteira para a ordem da matriz');
     }
 }
 
-function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
-    var tamanho = sudoku.length;
+function createSudokuGraph(ordem, LinhaIni, ColunaIni) {
+    var tamanho = ordem;
     var nos = [];
     var arestas = [];
     const subgridSize = Math.sqrt(ordem);
@@ -21,7 +21,7 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
     for (var i = 0; i < tamanho; i++) {
         for (var j = 0; j < tamanho; j++) {
             var id = i * tamanho + j;
-            var label = sudoku[i][j] !== 0 ? sudoku[i][j].toString() : '';
+            var label = '';
             var x = (j + 1) * 100;
             var y = (i + 1) * 100;
             nos.push({ id: id, label: label, x: x, y: y});
@@ -117,7 +117,7 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
     }
 
     return grid;
-}*/
+}
 
 // Colorir os vértices
     /*var colorido = {};
@@ -145,4 +145,19 @@ function createSudokuGraph(sudoku, LinhaIni, ColunaIni) {
                 colorFound = true;
             }
         }
-    });*/
+    });
+
+    function drawSudoku(grid) {
+    const table = document.getElementById('sudoku');
+    table.innerHTML = '';
+
+    for (let i = 0; i < grid.length; i++) {
+        const row = document.createElement('tr');
+        for (let j = 0; j < grid[i].length; j++) {
+            const cell = document.createElement('td');
+            cell.textContent = grid[i][j];
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+}*/
