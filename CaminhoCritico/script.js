@@ -55,17 +55,17 @@ function calcularPERT(dados) {
 
 function calcularTempos(grafo) {
     const tempos = {};
-    const pilha = [];
+    const fila = [];
     const caminhoCritico = [];
     
     Object.keys(grafo).forEach(no => {
         if (grafo[no].precedentes.length === 0) {
-            pilha.push(no);
+            fila.push(no);
         }
     });
 
-    while (pilha.length > 0) {
-        const atual = pilha.pop();
+    while (fila.length > 0) {
+        const atual = fila.shift();
         const dadosAtuais = grafo[atual];
 
         if (!tempos[atual]) {
@@ -80,21 +80,21 @@ function calcularTempos(grafo) {
             tempos[sucessor].inicioMinimo = Math.max(tempos[sucessor].inicioMinimo, tempos[atual].fimMinimo);
             tempos[sucessor].fimMinimo = tempos[sucessor].inicioMinimo + grafo[sucessor].duracao;
 
-            pilha.push(sucessor);
+            fila.push(sucessor);
         });
     }
 
     const grafoReverso = reverterGrafo(grafo);
     Object.keys(grafoReverso).forEach(no => {
         if (grafoReverso[no].sucessores.length === 0) {
-            pilha.push(no);
+            fila.push(no);
             tempos[no].fimMaximo = tempos[no].fimMinimo;
             tempos[no].inicioMaximo = tempos[no].fimMaximo - grafo[no].duracao;
         }
     });
 
-    while (pilha.length > 0) {
-        const atual = pilha.pop();
+    while (fila.length > 0) {
+        const atual = fila.shift();
         const dadosAtuais = grafoReverso[atual];
 
         dadosAtuais.precedentes.forEach(pred => {
@@ -106,7 +106,7 @@ function calcularTempos(grafo) {
                 tempos[pred].inicioMaximo = tempos[pred].fimMaximo - grafo[pred].duracao;
             }
 
-            pilha.push(pred);
+            fila.push(pred);
         });
     }
 
@@ -150,10 +150,9 @@ function exibirResultados(resultado) {
     containerGrafo.innerHTML = '';
     containerTabelas.innerHTML = '';
 
-    // Preparar nós e arestas para o grafo
-    const grafoDiv = document.createElement('div');
+    /*const grafoDiv = document.createElement('div');
     grafoDiv.innerText = JSON.stringify(grafo, null, 2);
-    containerGrafo.appendChild(grafoDiv);
+    containerGrafo.appendChild(grafoDiv);*/
 
     // Exibir a tabela de tempos
     const tabelaTempos = document.createElement('table');
