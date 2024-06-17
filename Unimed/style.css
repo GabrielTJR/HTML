@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+}
+body{
+    background-color: rgb(172, 172, 172);
+}
+
+header{
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, rgb(6, 6, 124), rgb(0, 0, 177), blue);
+    padding: 15px;
+    
+}
+
+.w-spotlight-hamburguer {
+    height: 64px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.w-spotlight-hamburguer i, .w-spotlight-hamburguer:after, .w-spotlight-hamburguer:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: #fff;
+}

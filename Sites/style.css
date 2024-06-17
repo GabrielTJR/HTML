@@ -69,8 +69,9 @@ div#foto{
 }
 
 section{
+    width: 70%;
+    margin: 0 auto;
     font-family: var(--font1);
-    width: auto;
 }
 
 section p{

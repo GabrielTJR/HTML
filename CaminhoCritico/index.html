@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Grafo PERT/CPM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gerador de Grafo PERT/CPM</h1>
+    <div class="container-formulario">
+        <table id="tabelaAtividades">
+            <thead>
+                <tr>
+                    <th>Atividade</th>
+                    <th>Duração</th>
+                    <th>Precedentes</th>
+                </tr>
+            </thead>
+            <tbody id="corpoAtividades">
+                <tr>
+                    <td><input type="text" class="atividade"></td>
+                    <td><input type="number" class="duracao"></td>
+                    <td><input type="text" class="precedentes"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="adicionarLinha">Adicionar Linha</button>
+        <button id="calcular">Calcular PERT/CPM</button>
+    </div>
+    <div id="resultado">
+        <h2>Resultados</h2>
+        <div id="grafo"></div>
+        <div id="tabelas"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
