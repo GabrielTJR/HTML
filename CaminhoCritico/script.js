@@ -86,12 +86,19 @@ function calcularTempos(grafo) {
         });
     }
 
+    let maiorFim = 0;
+    Object.keys(tempos).forEach(no => {
+        if(tempos[no].fimMinimo > maiorFim){
+            maiorFim = tempos[no].fimMinimo;
+        }
+    });
+
     const grafoReverso = reverterGrafo(grafo);
     Object.keys(grafoReverso).forEach(no => {
         if (grafoReverso[no].sucessores.length === 0) {
             fila.push(no);
-            tempos[no].fimMaximo = tempos[no].fimMinimo;
-            tempos[no].inicioMaximo = tempos[no].fimMaximo - grafo[no].duracao;
+            tempos[no].fimMaximo = maiorFim;
+            tempos[no].inicioMaximo = maiorFim - grafo[no].duracao;
         }
     });
 
@@ -162,9 +169,9 @@ function exibirResultados(resultado) {
         <thead>
             <tr>
                 <th>Atividade</th>
-                <th>Início Mínimo</th>                
+                <th>Início Mínimo</th>  
+                <th>Fim Mínimo</th>              
                 <th>Início Máximo</th>
-                <th>Fim Mínimo</th>
                 <th>Fim Máximo</th>
                 <th>Folga</th>
             </tr>
@@ -173,9 +180,9 @@ function exibirResultados(resultado) {
             ${Object.keys(tempos).map(atividade => `
                 <tr>
                     <td>${atividade}</td>
-                    <td>${tempos[atividade].inicioMinimo}</td>                    
+                    <td>${tempos[atividade].inicioMinimo}</td>
+                    <td>${tempos[atividade].fimMinimo}</td>                    
                     <td>${tempos[atividade].inicioMaximo}</td>
-                    <td>${tempos[atividade].fimMinimo}</td>
                     <td>${tempos[atividade].fimMaximo}</td>
                     <td>${tempos[atividade].folga}</td>
                 </tr>
