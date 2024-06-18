@@ -1,3 +1,4 @@
+// Função para gerar nó do grafo
 document.getElementById('adicionarLinha').addEventListener('click', function() {
     const corpoAtividades = document.getElementById('corpoAtividades');
     const novaLinha = document.createElement('tr');
@@ -11,6 +12,7 @@ document.getElementById('adicionarLinha').addEventListener('click', function() {
     corpoAtividades.appendChild(novaLinha);
 });
 
+// Função para calcular caminho critico, começos, finais e folga
 document.getElementById('calcular').addEventListener('click', function() {
     const atividades = document.getElementsByClassName('atividade');
     const duracoes = document.getElementsByClassName('duracao');
