@@ -12,7 +12,7 @@ document.getElementById('adicionarLinha').addEventListener('click', function() {
     corpoAtividades.appendChild(novaLinha);
 });
 
-// Função para calcular caminho critico, começos, finais e folga
+// Função para pegar os elementos fornecidos e chamar as funções para calcular e exibir resultados
 document.getElementById('calcular').addEventListener('click', function() {
     const atividades = document.getElementsByClassName('atividade');
     const duracoes = document.getElementsByClassName('duracao');
@@ -29,9 +29,10 @@ document.getElementById('calcular').addEventListener('click', function() {
 
     const resultado = calcularPERT(dados);
     exibirResultados(resultado);
-    desenharGrafo(dados);    
+    desenharGrafo(dados);
 });
 
+// Função para calcular caminho critico, começos, finais e folga
 function calcularPERT(dados) {
     const grafo = {};
     dados.forEach(({ atividade, duracao, precedentes }) => {
@@ -119,11 +120,22 @@ function calcularTempos(grafo) {
             fila.push(pred);
         });
     }
-
     Object.keys(tempos).forEach(no => {
         tempos[no].folga = tempos[no].fimMaximo - tempos[no].fimMinimo;
-        if (tempos[no].folga === 0) {
-            caminhoCritico.push(no);
+    });
+
+    function dfs(no) {
+        caminhoCritico.push(no);
+        grafo[no].sucessores.forEach(sucessor => {
+            if (tempos[sucessor].folga === 0 && !caminhoCritico.includes(sucessor)) {
+                dfs(sucessor);
+            }
+        });
+    }
+
+    Object.keys(grafo).forEach(no => {
+        if (grafo[no].precedentes.length === 0 && tempos[no].folga === 0) {
+            dfs(no);
         }
     });
 

@@ -39,3 +39,9 @@ button {
 #resultado {
     margin-top: 20px;
 }
+
+#grafo {
+    width: 600px;
+    height: 600px;
+    border: 1px solid lightgray;
+}
