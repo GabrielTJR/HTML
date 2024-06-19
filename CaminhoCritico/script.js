@@ -29,6 +29,7 @@ document.getElementById('calcular').addEventListener('click', function() {
 
     const resultado = calcularPERT(dados);
     exibirResultados(resultado);
+    desenharGrafo(dados);    
 });
 
 function calcularPERT(dados) {
@@ -196,4 +197,31 @@ function exibirResultados(resultado) {
     const divCaminhoCritico = document.createElement('div');
     divCaminhoCritico.innerText = `Caminho Crítico: ${caminhoCritico.join(' -> ')}`;
     containerTabelas.appendChild(divCaminhoCritico);
+}
+
+function desenharGrafo(dados){
+    const nodes = new vis.DataSet(
+        dados.map(({ atividade }) => ({ id: atividade, label: `${atividade}`, shape: 'box' }))
+    );
+
+    const edges = new vis.DataSet();
+    dados.forEach(({ atividade, precedentes }) => {
+        precedentes.forEach(pred => {
+            edges.add({ from: pred, to: atividade, arrows: 'to' });
+        });
+    });
+
+    const container = document.getElementById('grafo');
+    const data = { nodes: nodes, edges: edges };
+    const options = {
+        layout: {
+            hierarchical: {
+                direction: 'LR', // Left to Right
+                sortMethod: 'directed',
+            }
+        },
+        physics: false
+    };
+
+    const network = new vis.Network(container, data, options);
 }
