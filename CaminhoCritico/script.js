@@ -160,10 +160,6 @@ function exibirResultados(resultado) {
     containerGrafo.innerHTML = '';
     containerTabelas.innerHTML = '';
 
-    /*const grafoDiv = document.createElement('div');
-    grafoDiv.innerText = JSON.stringify(grafo, null, 2);
-    containerGrafo.appendChild(grafoDiv);*/
-
     // Exibir a tabela de tempos
     const tabelaTempos = document.createElement('table');
     tabelaTempos.innerHTML = `
