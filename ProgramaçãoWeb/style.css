@@ -6,13 +6,6 @@
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.685);
 }
 
-body{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    height: 98vh;
-}
-
 header{
     background-image: linear-gradient(45deg, orange, rgb(121, 88, 26));
     height: 150px;
@@ -44,8 +37,7 @@ main{
     font-size: 30px;
     font-weight: bold;
     color: black;
-    margin: 50px auto;
-    width: 50vw;
+    background-image: url();
 }
 
 nav{
