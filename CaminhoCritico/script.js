@@ -182,6 +182,7 @@ function exibirResultados(resultado) {
                 <th>Fim Mínimo</th>              
                 <th>Início Máximo</th>
                 <th>Fim Máximo</th>
+                <th>Duração</th>
                 <th>Folga</th>
             </tr>
         </thead>
@@ -192,6 +193,7 @@ function exibirResultados(resultado) {
                     <td>${tempos[atividade].inicioMinimo}</td>
                     <td>${tempos[atividade].fimMinimo}</td>                    
                     <td>${tempos[atividade].inicioMaximo}</td>
+                    <td>${tempos[atividade].fimMaximo}</td>
                     <td>${tempos[atividade].fimMaximo}</td>
                     <td>${tempos[atividade].folga}</td>
                 </tr>
