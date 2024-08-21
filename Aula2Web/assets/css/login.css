@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+input, label{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+input[type=submit]{
+    background-color: #ccc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    
+    box-shadow: 1px 1px 1px black;
+}
+
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+input[type=submit]:active{
+    box-shadow: 1px 1px 1px black inset;
+}
+
+.imgcontainer{
+    margin: 24px 0;
+    text-align: center;
+}
+
+#logo{
+    width: 30%;
+    border-radius: 50%;
+}
