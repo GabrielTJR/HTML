@@ -13,5 +13,7 @@
             "database": "mysql",
             "username": "user"
         }
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": false
 }
