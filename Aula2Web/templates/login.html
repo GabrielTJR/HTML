@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Aula2Web/assets/css/global.css">
+    <link rel="stylesheet" href="/Aula2Web/assets/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <main>
+        <h2>Área de Login do Usuário</h2>
+        <form action="/login" method="post">
+            <div class="imgcontainer">
+                <img src="/Aula2Web/assets/imagens/logo1.jpeg" alt="logo" id="logo">
+            </div>
+            <div class="container">
+                <label>Login</label>
+                <input type="text" id="login" name="username" placeholder="Digite seu login" required>
+                <label>Password</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <input type="submit" value="Entrar" id="logar">
+            </div>
+        </form>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
