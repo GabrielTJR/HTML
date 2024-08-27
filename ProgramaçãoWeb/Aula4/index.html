@@ -11,12 +11,33 @@
         <h1>Faça seu projeto de economia!</h1>
     </header>
     <main>
-        <h2>Simule:</h2>
-        <input type="number" min="1" id="objetivo" required>
-        <input type="submit">
+        <form id="formulario">
+            <h2>Simule:</h2>
+            <label>Objetivo financeiro: </label>
+            <input type="number" min="1" id="objetivo" required><br><br>
+            <label>Valor inicial: </label>
+            <input type="number" min="1" id="inicial" required><br><br>
+            <label>Depósito mensal: </label>
+            <input type="number" min="1" id="mensal" required><br><br>
+            <input onclick="gerarPoupanca()" type="submit">
+        </form>
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor atual</th>
+                        <th>Meses</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela">
+
+                </tbody>
+            </table>
+        </div>
+        <button onclick="novaPoupanca()" id="novamente">Realizar nova poupança</button>
     </main>
     <footer>
-
+        <p>Site projetado e desenvolvido por &copy;Gabriel Toscano</p>
     </footer>
     <script src="script.js"></script>
 </body>
