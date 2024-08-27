@@ -73,3 +73,7 @@ footer{
     margin: 15px;
     margin-bottom: 25px;
 }
+
+#tabela-container{
+    display: none;
+}

@@ -1,5 +1,6 @@
 function gerarPoupanca(){
     event.preventDefault();
+    var table = document.getElementById("tabela-container");
     var tabela = document.getElementById("tabela");
     var form = document.getElementById("formulario");
     var novamente = document.getElementById("novamente");
@@ -9,6 +10,7 @@ function gerarPoupanca(){
 
     form.style.display = 'none'
     novamente.style.display = 'block'
+    table.style.display = 'block'
 
     var atual = inicial;
     var meses = 0;
@@ -40,3 +42,4 @@ function novaPoupanca(){
     novamente.style.display = 'none'
     tabela.innerHTML = ""
 }
+
