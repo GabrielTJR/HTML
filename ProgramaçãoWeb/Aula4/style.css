@@ -38,6 +38,12 @@ form{
     padding: 20px;
 }
 
+input{
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
 table{
     background-color: rgb(238, 238, 238);
     border: 1px solid #ddd;
