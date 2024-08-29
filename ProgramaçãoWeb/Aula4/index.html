@@ -19,12 +19,12 @@
             <input type="number" min="1" id="inicial" required><br>
             <label>Depósito mensal: </label>
             <input type="number" min="1" id="mensal" required><br>
-            <input onclick="gerarPoupanca()" type="submit">
+            <input type="submit" value="Enviar">
         </form>
         <div id="tabela-container">
             <table>
                 <thead>
-                    <tr>
+                    <tr id="cabecalho">
                         <th>Valor atual</th>
                         <th>Meses</th>
                     </tr>

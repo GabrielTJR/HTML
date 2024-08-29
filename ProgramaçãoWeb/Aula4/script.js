@@ -1,16 +1,19 @@
-function gerarPoupanca(){
+var table = document.getElementById("tabela-container");
+var tabela = document.getElementById("tabela");
+var form = document.getElementById("formulario");
+var novamente = document.getElementById("novamente");
+form.addEventListener('submit', gerarPoupanca);
+
+function gerarPoupanca(event) {
     event.preventDefault();
-    var table = document.getElementById("tabela-container");
-    var tabela = document.getElementById("tabela");
-    var form = document.getElementById("formulario");
-    var novamente = document.getElementById("novamente");
+    
     var objetivo = parseFloat(document.getElementById("objetivo").value);
     var inicial = parseFloat(document.getElementById("inicial").value);
     var mensal = parseFloat(document.getElementById("mensal").value);
 
     form.style.display = 'none'
     novamente.style.display = 'block'
-    table.style.display = 'block'
+    table.style.display = 'flex'
 
     var atual = inicial;
     var meses = 0;
@@ -35,10 +38,16 @@ function gerarPoupanca(){
 }
 
 function novaPoupanca(){
-    var tabela = document.getElementById("tabela");
-    var form = document.getElementById("formulario");
-    var novamente = document.getElementById("novamente");
+    var objetivo = document.getElementById("objetivo")
+    var inicial = document.getElementById("inicial")
+    var mensal = document.getElementById("mensal")
+
+    objetivo.value ="";
+    inicial.value ="";
+    mensal.value="";
+
     form.style.display = 'flex'
+    table.style.display = 'none'
     novamente.style.display = 'none'
     tabela.innerHTML = ""
 }
