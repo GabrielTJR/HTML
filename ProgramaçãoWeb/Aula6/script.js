@@ -18,24 +18,39 @@ function carregarEndereco(){
 }
 
 function salvarProdutos(){
-    let idNomeProduto1 = document.getElementById('prod_havaianas');
+    let nomeProduto1 = document.getElementById("prod_havaianas").textContent;
+    let qntProduto1 = document.getElementById("prod_havaianas_qnt").textContent;
+    let precoProduto1 = document.getElementById("prod_havaianas_preco").textContent;
 
-    let nomeProduto1 = document.getElementById('prod_havaianas').textContent;
-    let qntProduto1 = document.getElementById('prod_havaianas_qnt').textContent;
-    let precoProduto1 = document.getElementById('prod_havaianas_preco').textContent;
+    alert('nomeProduto1')
 
-    sessionStorage.setItem(idNomeProduto1, nomeProduto1)
-    sessionStorage.setItem("prod_havaianas_qnt", nomeProduto1)
-    sessionStorage.setItem("prod_havaianas_preco", nomeProduto1)
+    sessionStorage.setItem("prod_havaianas", nomeProduto1)
+    sessionStorage.setItem("prod_havaianas_qnt", qntProduto1)
+    sessionStorage.setItem("prod_havaianas_preco", precoProduto1)
 
-    let idNomeProduto2 = document.getElementById('prod_alpargatas');
+    let nomeProduto2 = document.getElementById("prod_alpargatas").textContent;
+    let qntProduto2 = document.getElementById("prod_alpargatas_qnt").textContent;
+    let precoProduto2 = document.getElementById("prod_alpargatas_preco").textContent;
 
-    let nomeProduto2 = document.getElementById('prod_alpargatas').textContent;
-    let qntProduto2 = document.getElementById('prod_alpargatas_qnt').textContent;
-    let precoProduto2 = document.getElementById('prod_alpargatas_preco').textContent;
+    sessionStorage.setItem("prod_alpargatas", nomeProduto2)
+    sessionStorage.setItem("prod_alpargatas_qnt", qntProduto2)
+    sessionStorage.setItem("prod_alpargatas_preco", precoProduto2)
+}
 
-    sessionStorage.setItem(idNomeProduto1, nomeProduto1)
-    sessionStorage.setItem("prod_alpargatas_qnt", nomeProduto1)
-    sessionStorage.setItem("prod_alpargatas_preco", nomeProduto1)
+function carregarProdutos(){
+    let np1 = sessionStorage.getItem("prod_havaianas");
+    let qp1 = sessionStorage.getItem("prod_havaianas_qnt");
+    let pp1 = sessionStorage.getItem("prod_havaianas_preco");
 
+    let np2 = sessionStorage.getItem("prod_alpargatas");
+    let qp2 = sessionStorage.getItem("prod_alpargatas_qnt");
+    let pp2 = sessionStorage.getItem("prod_alpargatas_preco");
+
+    document.getElementById("prod_havaianas").textContent = np1;
+    document.getElementById("prod_havaianas_qnt").textContent = qp1;
+    document.getElementById("prod_havaianas_preco").textContent = pp1;
+
+    document.getElementById("prod_alpargatas").textContent = np2;
+    document.getElementById("prod_alpargatas_qnt").textContent = qp2;
+    document.getElementById("prod_alpargatas_preco").textContent = pp2;
 }
