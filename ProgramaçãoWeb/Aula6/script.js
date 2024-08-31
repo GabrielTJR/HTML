@@ -22,8 +22,6 @@ function salvarProdutos(){
     let qntProduto1 = document.getElementById("prod_havaianas_qnt").textContent;
     let precoProduto1 = document.getElementById("prod_havaianas_preco").textContent;
 
-    alert('nomeProduto1')
-
     sessionStorage.setItem("prod_havaianas", nomeProduto1)
     sessionStorage.setItem("prod_havaianas_qnt", qntProduto1)
     sessionStorage.setItem("prod_havaianas_preco", precoProduto1)
