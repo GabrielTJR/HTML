@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #ddd;
+}
+
+header{
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#inicio>h1{
+    font-size:50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 4px #ddd;
+    color: white;
+    margin: 0 auto;
+}
