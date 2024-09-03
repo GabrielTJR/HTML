@@ -65,6 +65,11 @@ main>h1{
     border-radius: 10px;
 }
 
+.movie-card:hover{
+    border-color: green;
+}
+
+
 .movie-card img{
     width: 100%;
     height: auto;
@@ -73,10 +78,6 @@ main>h1{
 
 .movie-card>p{
     font-size: 20px;
-}
-
-.movie-card:hover{
-    border-color: green;
 }
 
 #movies{
