@@ -1,60 +1,22 @@
-var card1 = document.getElementById("filme1");
-var card2 = document.getElementById("filme2");
-var card3 = document.getElementById("filme3");
-var card4 = document.getElementById("filme4");
-var card5 = document.getElementById("filme5");
-var card6 = document.getElementById("filme6");
+const filmes = [];
+const descricoes = [];
 
-
-var describe1 = document.getElementById("describe1");
-var describe2 = document.getElementById("describe2");
-var describe3 = document.getElementById("describe3");
-var describe4 = document.getElementById("describe4");
-var describe5 = document.getElementById("describe5");
-var describe6 = document.getElementById("describe6");
-
-function verDescricao(filme){
-    if(filme == 1){
-        card1.style.display = "none";
-        describe1.style.display = "flex";
-    }else if(filme == 2){
-        card2.style.display = "none";
-        describe2.style.display = "flex";
-    }else if(filme == 3){
-        card3.style.display = "none";
-        describe3.style.display = "flex";
-    }else if(filme == 4){
-        card4.style.display = "none";
-        describe4.style.display = "flex";
-    }else if(filme == 5){
-        card5.style.display = "none";
-        describe5.style.display = "flex";
-    }else if(filme == 6){
-        card6.style.display = "none";
-        describe6.style.display = "flex";
-    }
+// Preenche os arrays com os IDs dos elementos
+for (let i = 1; i <= 6; i++) {
+    filmes[i] = document.getElementById(`filme${i}`);
+    descricoes[i] = document.getElementById(`describe${i}`);
 }
 
-function verCapa(filme){
-    if(filme == 1){
-        card1.style.display = "flex";
-        describe1.style.display = "none";
-    }else if(filme == 2){
-        card2.style.display = "flex";
-        describe2.style.display = "none";
-    }else if(filme == 3){
-        card3.style.display = "flex";
-        describe3.style.display = "none";
-    }else if(filme == 4){
-        card4.style.display = "flex";
-        describe4.style.display = "none";
-    }else if(filme == 5){
-        card5.style.display = "flex";
-        describe5.style.display = "none";
-    }else if(filme == 6){
-        card6.style.display = "flex";
-        describe6.style.display = "none";
-    }
+// Função para mostrar a descrição e ocultar o filme
+function verDescricao(filme) {
+    filmes[filme].style.display = 'none';
+    descricoes[filme].style.display = 'flex';
+}
+
+// Função para mostrar a capa e ocultar a descrição
+function verCapa(filme) {
+    filmes[filme].style.display = 'flex';
+    descricoes[filme].style.display = 'none';
 }
 
 function selecionarFilme(){

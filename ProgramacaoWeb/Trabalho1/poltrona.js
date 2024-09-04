@@ -9,7 +9,7 @@ function aoClicarNaCelula(event) {
     
     // Exibe o texto em um alerta (ou realiza qualquer outra ação desejada)
     if(texto == "💺"){
-        alert('Você clicou na célula com o texto: ' + texto);
+        alert('Assento selecionado');
         // Adiciona a classe 'clicada' à célula que foi clicada
         event.target.classList.add('clicada');
     }else{
