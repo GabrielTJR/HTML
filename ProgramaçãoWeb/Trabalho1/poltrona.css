@@ -1,0 +1,37 @@
+#poltronas{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table{
+    margin-top: 30px;
+    color: white;
+    border-collapse: collapse;
+}
+
+th, td{    
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+}
+
+td:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+#tela{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
