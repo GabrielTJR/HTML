@@ -1,24 +1,32 @@
-const filmes = [];
-const descricoes = [];
+let cont = 1;
+const filmes = document.querySelectorAll('.filmes');
+const descricoes = document.querySelectorAll('.movie-describe');
+const selecionar = document.querySelectorAll('.selecionarFilme')
 
-// Preenche os arrays com os IDs dos elementos
-for (let i = 1; i <= 6; i++) {
-    filmes[i] = document.getElementById(`filme${i}`);
-    descricoes[i] = document.getElementById(`describe${i}`);
-}
+filmes.forEach((filme, index) => {
+    filme.addEventListener('click', () => verDescricao(index));
+});
+
+descricoes.forEach((descricao, index) => {
+    descricao.addEventListener('click', () => verCapa(index));
+});
+
+selecionar.forEach((selecao, index) => {
+    selecao.addEventListener('click', () => selecionarFilme(index));
+});
 
 // Função para mostrar a descrição e ocultar o filme
-function verDescricao(filme) {
-    filmes[filme].style.display = 'none';
-    descricoes[filme].style.display = 'flex';
+function verDescricao(index) {
+    filmes[index].style.display = 'none';
+    descricoes[index].style.display = 'flex';
 }
 
 // Função para mostrar a capa e ocultar a descrição
-function verCapa(filme) {
-    filmes[filme].style.display = 'flex';
-    descricoes[filme].style.display = 'none';
+function verCapa(index) {
+    filmes[index].style.display = 'flex';
+    descricoes[index].style.display = 'none';
 }
 
-function selecionarFilme(){
+function selecionarFilme(numeroFilme){
     
 }
