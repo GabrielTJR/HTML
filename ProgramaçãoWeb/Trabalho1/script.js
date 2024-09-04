@@ -19,40 +19,44 @@ function verDescricao(filme){
         describe1.style.display = "flex";
     }else if(filme == 2){
         card2.style.display = "none";
-        describe2.style.display = "block";
+        describe2.style.display = "flex";
     }else if(filme == 3){
         card3.style.display = "none";
-        describe3.style.display = "block";
+        describe3.style.display = "flex";
     }else if(filme == 4){
         card4.style.display = "none";
-        describe4.style.display = "block";
+        describe4.style.display = "flex";
     }else if(filme == 5){
         card5.style.display = "none";
-        describe5.style.display = "block";
+        describe5.style.display = "flex";
     }else if(filme == 6){
         card6.style.display = "none";
-        describe6.style.display = "block";
+        describe6.style.display = "flex";
     }
 }
 
 function verCapa(filme){
     if(filme == 1){
-        card1.style.display = "block";
+        card1.style.display = "flex";
         describe1.style.display = "none";
     }else if(filme == 2){
-        card2.style.display = "block";
+        card2.style.display = "flex";
         describe2.style.display = "none";
     }else if(filme == 3){
-        card3.style.display = "block";
+        card3.style.display = "flex";
         describe3.style.display = "none";
     }else if(filme == 4){
-        card4.style.display = "block";
+        card4.style.display = "flex";
         describe4.style.display = "none";
     }else if(filme == 5){
-        card5.style.display = "block";
+        card5.style.display = "flex";
         describe5.style.display = "none";
     }else if(filme == 6){
-        card6.style.display = "block";
+        card6.style.display = "flex";
         describe6.style.display = "none";
     }
+}
+
+function selecionarFilme(){
+    
 }
