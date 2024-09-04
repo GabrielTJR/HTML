@@ -2,10 +2,16 @@
 function aoClicarNaCelula(event) {
     // Obtém o texto da célula clicada
     const texto = event.target.textContent;
+
+    document.querySelectorAll('td').forEach(celula => {
+        celula.classList.remove('clicada');
+    });
     
     // Exibe o texto em um alerta (ou realiza qualquer outra ação desejada)
     if(texto == "💺"){
         alert('Você clicou na célula com o texto: ' + texto);
+        // Adiciona a classe 'clicada' à célula que foi clicada
+        event.target.classList.add('clicada');
     }else{
         alert('Assento indisponível');
     }
