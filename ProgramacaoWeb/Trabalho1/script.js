@@ -27,6 +27,7 @@ function verCapa(index) {
     descricoes[index].style.display = 'none';
 }
 
-function selecionarFilme(numeroFilme){
-    
+function selecionarFilme(filme){
+    let htmltext = document.getElementById(`filme${filme+1}`).innerHTML;
+    sessionStorage.setItem("filmeSelecionado", htmltext);
 }

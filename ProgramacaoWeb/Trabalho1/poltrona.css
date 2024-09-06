@@ -51,17 +51,17 @@ td:hover{
 }
 
 a{
-    border: 3px solid white;
+    border: 1px solid white;
     padding: 15px;
     margin: 5px;
     margin-top: 30px;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px white;
+    box-shadow: 1px 1px 3px #ddd;
     text-align: center;
     text-decoration: none;
     color: white;
 }
 
 a:active{
-    box-shadow: 2px 2px 5px inset white;
+    box-shadow: 1px 1px 3px inset #ddd;
 }

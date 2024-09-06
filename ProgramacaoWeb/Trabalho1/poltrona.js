@@ -1,25 +1,24 @@
 // Função que será chamada quando uma célula for clicada
 function marcarAssento(event) {
-    // Obtém o texto da célula clicada
     const texto = event.target.textContent;
     
-    // Exibe o texto em um alerta (ou realiza qualquer outra ação desejada)
     if(event.target.classList.contains('clicada')){
         event.target.classList.remove('clicada');
     }
     else if(texto == "💺"){
-        // Adiciona a classe 'clicada' à célula que foi clicada
         event.target.classList.add('clicada');
     }else{
         alert('Assento indisponível');
     }
 
 }
-
+// Função para salvar as poltronas selecionadas
 function selecionarPoltrona(){
+    let poltronas = 0;
     const poltronaSelecionada = document.querySelectorAll('.clicada');
     poltronaSelecionada.forEach(poltrona => {
         alert(poltrona.id);
+        poltronas++;
     });
 }
 
@@ -52,7 +51,7 @@ let bodyRows = '';
 letras.forEach((letra, i) => {
     let row = `<tr><th>${letra}</th>`;
     statusPoltronas[i].forEach((status, j) => {
-        const cellId = `${letra}${j + 1}`;  // Exemplo: A1, B2
+        const cellId = `${letra}${j + 1}`;
         row += `<td id="${cellId}">${status}</td>`;
     });
     row += '</tr>';
@@ -60,10 +59,8 @@ letras.forEach((letra, i) => {
 });
 tbody.innerHTML = bodyRows;
 
-// Obtém todas as células da tabela
+// Obtém todas as células da tabela e adiciona a função marcarAssento nelas
 const todasAsCelulas = document.querySelectorAll('td');
-
-// Adiciona um evento de clique a cada célula
 todasAsCelulas.forEach(celula => {
     celula.addEventListener('click', marcarAssento);
 });
