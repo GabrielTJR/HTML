@@ -4,17 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Prova 1</title>
 </head>
 <body>
     <header>
-
+        <div id="teste">
+            <img src="./imagens/menu.png" height="50px" width="auto" id="menu" onclick="abrirMenu()">
+            <img src="./imagens/fechar.png" height="50px" width="auto" id="fechar" onclick="abrirMenu()">
+            <nav id="opcoes">
+                <li><a href="principios.html">Twelve Principles of Agile Software</a></li>
+                <li><a href="signitarios.html">View Signatories</a></li>
+                <li><a href="autores.html">About the Authors</a></li>
+                <li><a href="manifesto.html">About the Manifesto</a></li>
+            </nav>
+        </div>
     </header>
     <main>
-
+        <h1>Manifesto for Agile Software Development</h1>
+        <div id="container">
+            <div id="texto" class="bloco">
+                <p>We are uncovering better ways of developing
+                    software by doing it and helping others do it.
+                    Through this work we have come to value: <br><br>   
+                    
+                    Individuals and interactions over processes and tools
+                    Working software over comprehensive documentation
+                    Customer collaboration over contract negotiation
+                    Responding to change over following a plan <br><br>
+                    
+                    That is, while there is value in the items on
+                    the right, we value the items on the left more.</p>
+            </div>
+            <div id="imagens" class="bloco">
+                <img src="./imagens/teste.png" id="imagem">
+            </div>
+            <div id="autores" class="bloco">
+                <div class="autor">
+                    <p>
+                        Kent Beck <br>
+                        Mike Beedle <br>
+                        Arie van Bennekum <br>
+                        Alistair Cockburn <br>
+                        Ward Cunningham <br>
+                        Martin Fowler <br>
+                    </p>
+                </div>
+                <div class="autor">
+                    <p>
+                        <p>
+                            James Grenning <br>
+                            Jim Highsmith <br>
+                            Andrew Hunt <br>
+                            Ron Jeffries <br>
+                            Jon Kern <br>
+                            Brian Marick <br>
+                        </p>
+                    </p>
+                </div>
+                <div class="autor">
+                    <p>
+                        <p>
+                            Robert C. Martin <br>
+                            Steve Mellor <br>
+                            Ken Schwaber <br>
+                            Jeff Sutherland <br>
+                            Dave Thomas <br>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        
-    </footer>
+    <footer>Site adaptado por Gabriel Toscano e Rafael Fernando</footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
