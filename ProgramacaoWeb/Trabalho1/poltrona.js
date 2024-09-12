@@ -17,9 +17,10 @@ function selecionarPoltrona(){
     let poltronas = 0;
     const poltronaSelecionada = document.querySelectorAll('.clicada');
     poltronaSelecionada.forEach(poltrona => {
-        alert(poltrona.id);
+        sessionStorage.setItem(`poltrona${poltronas}`, poltrona.id);
         poltronas++;
     });
+    sessionStorage.setItem('qntPoltronas', poltronas)
 }
 
 const letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];

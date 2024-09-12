@@ -21,14 +21,34 @@
 }
 
 .combo_descricao{
-    padding: 15px;
     color: white;
     font-family: sans-serif;
     text-align: left;
+    font-size: 1vw;
+    margin: auto;
 }
 
 img{
     height: 100%;
     width: auto;
     border-radius: 5px 0 0 5px;
+}
+
+.clicada{
+    background-color: blue;
+}
+
+a{
+    border: 1px solid white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #ddd;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+a:active{
+    box-shadow: 1px 1px 3px inset #ddd;
 }
