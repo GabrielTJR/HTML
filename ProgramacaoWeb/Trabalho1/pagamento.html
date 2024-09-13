@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="pagamento.css">
+    <link rel="shortcut icon" href="./imagens/logo.ico" type="image/x-icon">
+    <title>Ingresso Cinema</title>
+</head>
+<body>
+    <header>
+        <img src="./imagens/logo.png" alt="img" id="logo" width="150px" height="150px">
+        <div id="inicio">
+            <h1>Cinema Shopping </h1>
+        </div>
+    </header>
+    <main>
+        <h1>Escolha o meio de pagamento</h1>
+        <h2 id="valorTotal"></h2>
+        <div id="container">
+            <form>                
+                <input type="radio" id="credito" name="payment" value="credito">
+                <label for="credito" class="payment-button">Cartão de Crédito</label><br>
+                
+                <input type="radio" id="debito" name="payment" value="debito">
+                <label for="debito" class="payment-button">Cartão de Débito</label><br>
+                
+                <input type="radio" id="pix" name="payment" value="pix">
+                <label for="pix" class="payment-button">PIX</label><br>
+                
+                <input type="radio" id="dinheiro" name="payment" value="dinheiro">
+                <label for="dinheiro" class="payment-button">Dinheiro</label><br>
+            </form>
+            <a href="final.html" onclick="confirmarPagamento()">Confirmar</a>  
+        </div>
+    </main>
+    <footer>
+        <p>Site projetado e desenvolvido por &copy;Gabriel Toscano</p>
+    </footer>
+    <script src="pagamento.js"></script>
+</body>
+</html>

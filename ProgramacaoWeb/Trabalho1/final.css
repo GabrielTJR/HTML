@@ -24,11 +24,6 @@
     border-radius: 10px;
 }
 
-.movie-card:hover{
-    border-color: green;
-}
-
-
 .movie-card img{
     width: 100%;
     height: auto;
@@ -38,40 +33,4 @@
 .movie-card>p{
     font-size: 100%;
     margin: auto;
-}
-
-.movie-describe{
-    display: none;
-    text-align: left;
-    flex-direction: column;
-    padding: 20px;
-    overflow: scroll;
-    font-size: 1.3vw;
-}
-
-.movie-describe::-webkit-scrollbar {
-    width: 0;
-    height: 0; 
-}
-
-div.horario{
-    margin-top: auto;
-    font-size: 1.2vw;
-}
-
-.selecionarFilme{
-    padding: 5px;
-    margin: 5px;
-    margin-top: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 2px black;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    min-width: 80%;
-    font-size: 1.3vw;
-}
-
-a:active{
-    box-shadow: 1px 1px 2px inset black;
 }
