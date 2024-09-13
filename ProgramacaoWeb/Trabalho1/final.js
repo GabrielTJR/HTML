@@ -28,4 +28,5 @@ for(let i=1; i<qntCombos; i++){
 let valorTotal = sessionStorage.getItem('valorTotal');
 prec.innerHTML = `R$ ${valorTotal}`
 
-let pagamento = sessionStorage
+let metodoPag = sessionStorage.getItem('metodoPag')
+paga.innerHTML = metodoPag
