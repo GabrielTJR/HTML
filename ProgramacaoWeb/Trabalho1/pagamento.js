@@ -12,3 +12,5 @@ let valorTotal = totalCombo + valorIngressos;
 
 document.getElementById('valorTotal').innerText = `Valor total: R$${valorTotal}`
 
+sessionStorage.setItem('valorTotal', valorTotal)
+
