@@ -17,6 +17,7 @@
     </header>
     <main>
         <h1>Escolha o meio de pagamento</h1>
+        <h2 id="valorTotal"></h2>
         <div id="container">
             <form>                
                 <input type="radio" id="credito" name="payment" value="credito">
@@ -28,21 +29,15 @@
                 <input type="radio" id="pix" name="payment" value="pix">
                 <label for="pix" class="payment-button">PIX</label><br>
                 
-                <input type="radio" id="boleto" name="payment" value="boleto">
-                <label for="boleto" class="payment-button">Boleto Bancário</label><br>
-                
-                <input type="radio" id="paypal" name="payment" value="paypal">
-                <label for="paypal" class="payment-button">PayPal</label><br>
-                
                 <input type="radio" id="dinheiro" name="payment" value="dinheiro">
                 <label for="dinheiro" class="payment-button">Dinheiro</label><br>
             </form>
-            <a href="pagamento.html" onclick="confirmarPagamento()">Confirmar</a>  
+            <a href="final.html" onclick="confirmarPagamento()">Confirmar</a>  
         </div>
     </main>
     <footer>
         <p>Site projetado e desenvolvido por &copy;Gabriel Toscano</p>
     </footer>
-    <script src="alimentos.js"></script>
+    <script src="pagamento.js"></script>
 </body>
 </html>

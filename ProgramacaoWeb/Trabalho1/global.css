@@ -47,14 +47,14 @@ main{
     margin-bottom: 40px;
 }
 
-main>h1{
+main>h1, main>h2{
     margin-top: 15px;
     color: #ddd;
     text-shadow: 1px 1px 3px black;
 }
 
 #container{
-    width: 100%;    
+    width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
