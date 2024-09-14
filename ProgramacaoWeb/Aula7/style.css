@@ -1,0 +1,23 @@
+.container-xxl{
+    background-color: rgb(201, 209, 215);
+}
+
+.container-xxl>h2{
+    font-size: 130%;
+    padding: 20px;
+}
+
+i{
+    font-size: 3rem;
+    text-align: right;
+}
+
+footer{
+    font: 400 italic 0.8em Arial;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(108, 117, 125);
+}
