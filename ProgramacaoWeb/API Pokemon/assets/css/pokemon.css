@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    color: #333;
+  }
+
+  #cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pokebola{
+    width: 50px;
+    height: auto;
+  }
+
+  h2{
+    padding: 10px;
+  }
+
+  .card{
+    text-transform: capitalize;
+  }
+  
