@@ -1,8 +1,13 @@
+var pagina = 0;
+var inicio = 0;
+var limite = 50;
+
 function getPokemons() {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=500')
+    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${inicio}&limit=${limite}`)
         .then(response => response.json())
         .then(pokemons => {
             const cards = document.getElementById('posts');
+            cards.innerHTML = '';
             const consultas = pokemons.results.map(pokemon => 
                 fetch(pokemon.url)
                     .then(response => response.json())
@@ -31,6 +36,18 @@ function getPokemons() {
                 });
             });
         });
+}
+
+function passarPagina(){
+    inicio+=50;
+    limite+=50;
+    getPokemons();
+}
+
+function voltarPagina(){
+    inicio-=50;
+    limite-=50;
+    getPokemons();
 }
 
 document.addEventListener('DOMContentLoaded', getPokemons)
