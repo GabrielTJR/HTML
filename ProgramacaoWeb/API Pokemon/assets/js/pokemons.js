@@ -1,9 +1,8 @@
 var pagina = 0;
 var inicio = 0;
-var limite = 50;
 
 function getPokemons() {
-    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${inicio}&limit=${limite}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${inicio}&limit=50`)
         .then(response => response.json())
         .then(pokemons => {
             const cards = document.getElementById('posts');
@@ -38,16 +37,25 @@ function getPokemons() {
         });
 }
 
+const proxPagina = document.getElementById('proxPagina');
+const voltPagina = document.getElementById('voltPagina');
+
 function passarPagina(){
     inicio+=50;
-    limite+=50;
+    pagina++;
     getPokemons();
+    if(pagina == 1){
+        voltPagina.style.display = 'block'
+    }
 }
 
 function voltarPagina(){
     inicio-=50;
-    limite-=50;
+    pagina--;
     getPokemons();
+    if(pagina == 0){
+        voltPagina.style.display = 'none'
+    }
 }
 
 document.addEventListener('DOMContentLoaded', getPokemons)
