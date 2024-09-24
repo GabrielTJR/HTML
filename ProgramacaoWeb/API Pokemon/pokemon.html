@@ -9,7 +9,7 @@
     <title>Pokemon</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <div class="p-4" id="cabecalho">
             <img id="pokebola" src="./assets/imagem/pokemon.png">
             <h1>Lista de Pokemons:</h1>
@@ -18,10 +18,14 @@
 
         </div>
         <div class="container row">
-            <button id="voltPagina" class="col-2" onclick="voltarPagina()">Voltar Página</button>
-            <button id="proxPagina" class="col-2 align-self-end" onclick="passarPagina()">Passsar Página</button>
+            <button id="voltPagina" class="col-2 ml-0" onclick="voltarPagina()">Voltar Página</button>
+            <button id="proxPagina" class="col-2 mr-0" onclick="passarPagina()">Passsar Página</button>
         </div>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/pokemons.js"></script>
 </body>
