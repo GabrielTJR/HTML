@@ -1,40 +1,70 @@
 var pagina = 0;
 var inicio = 0;
 
+const cards = document.getElementById('posts');
+
 function getPokemons() {
+    cards.innerHTML = '';
     fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${inicio}&limit=50`)
         .then(response => response.json())
         .then(pokemons => {
-            const cards = document.getElementById('posts');
-            cards.innerHTML = '';
             const consultas = pokemons.results.map(pokemon => 
                 fetch(pokemon.url)
                     .then(response => response.json())
-                    .then(pokemon_1url => 
-                        fetch(pokemon_1url.forms[0].url)
+                    .then(pokemonInfo => 
+                        fetch(pokemonInfo.forms[0].url)
                             .then(response => response.json())
-                            .then(pokemon_2url => ({
-                                name: pokemon.name,
-                                img: pokemon_2url.sprites.front_default,
-                                id: pokemon_2url.id
+                            .then(pokemonForma => ({
+                                nome: pokemon.name,
+                                img: pokemonForma.sprites.front_default,
+                                id: pokemonForma.id
                             }))
                     )
             );
 
             Promise.all(consultas).then(pokemons => {
-                pokemons.forEach(({ name, img, id }) => {
-                    const card = document.createElement('div');
-                    card.className = 'card col-2 m-2';
-                    card.innerHTML = `
-                        <img src="${img}">
-                        <div class='card-body pb-0'>
-                            <h2 class='card-title fs-6 pb-0'>${name}</h2>
-                        </div>
-                        <div class='card-footer text-end'>ID: ${id}</div>`;
-                    cards.appendChild(card);
+                pokemons.forEach(({nome, img, id }) => {
+                    criarCard(nome, img, id);
                 });
             });
         });
+}
+
+function pesquisarPokemon(){
+    cards.innerHTML = '';
+    const pesquisa = document.getElementById('pesquisa').value.toLowerCase();
+    fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1302`)
+        .then(response => response.json())
+        .then(pokemons => {
+            const pokemonEncontrado = pokemons.results.find(pokemon => pokemon.name.toLowerCase() == pesquisa);
+            if (pokemonEncontrado) {
+                fetch(pokemonEncontrado.url)
+                    .then(response => response.json())
+                    .then(pokemonInfo => {
+                        fetch(pokemonInfo.forms[0].url)
+                            .then(response => response.json())
+                            .then(pokemonForma => {
+                                criarCard(pokemonForma.name, pokemonForma.sprites.front_default, pokemonForma.id);
+                            });
+                    });
+            } else {
+                console.log("Pokémon não encontrado.");
+            }
+            
+        });
+
+}
+
+function criarCard(nome, img, id){
+    const card = document.createElement('div');
+    card.className = 'card col-2 m-2';
+    card.innerHTML = `
+        <img src="${img}">
+        <div class='card-body pb-0'>
+            <h2 class='card-title fs-6 pb-0'>${nome}</h2>
+        </div>
+        <div class='card-footer text-end'>ID: ${id}</div>`;
+    cards.appendChild(card);
 }
 
 const proxPagina = document.getElementById('proxPagina');

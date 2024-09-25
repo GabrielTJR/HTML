@@ -1,40 +1,53 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  main{
-    margin-bottom: 30px;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    margin-left: 20px;
-    color: #333;
-  }
+main{
+  margin-bottom: 30px;
+}
 
-  #cabecalho{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
 
-  #pokebola{
-    width: 50px;
-    height: auto;
-  }
+h1 {
+  color: #333;
+  margin-bottom: 0;
+}
 
-  h2{
-    padding: 10px;
-  }
+#cabecalho{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .card{
-    text-transform: capitalize;
-  }
+#pokebola{
+  width: 50px;
+  height: auto;
+}
 
+h2{
+  padding: 10px;
+}
+
+.card{
+  text-transform: capitalize;
+}
+
+#voltPagina{
+  display: none;
+}
+
+button{
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+button:active{
+  box-shadow: 3px 3px 3px inset rgba(0, 0, 0, 0.425);
+}
