@@ -66,6 +66,11 @@ function pesquisarPokemon(){
 function buscarPagina(){
     pagina = parseInt(document.getElementById('paginaPesquisa').value);
     inicio = (pagina-1)*50;
+    if(pagina > 1){
+        voltPagina.style.display = 'block'
+    }else{
+        voltPagina.style.display = 'none'
+    }
     getPokemons();
 }
 
@@ -91,7 +96,7 @@ function passarPagina(){
     inicio+=50;
     pagina++;
     getPokemons();
-    if(pagina == 1){
+    if(pagina > 1){
         voltPagina.style.display = 'block'
     }
 }
@@ -100,7 +105,7 @@ function voltarPagina(){
     inicio-=50;
     pagina--;
     getPokemons();
-    if(pagina == 0){
+    if(pagina == 1){
         voltPagina.style.display = 'none'
     }
 }
