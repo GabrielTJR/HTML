@@ -2,6 +2,10 @@ var pagina = 0;
 var inicio = 0;
 
 const cards = document.getElementById('posts');
+const proxPagina = document.getElementById('proxPagina');
+const voltPagina = document.getElementById('voltPagina');
+const paginas = document.getElementById('paginas');
+const voltarbutton = document.getElementById('voltar')
 
 function getPokemons() {
     cards.innerHTML = '';
@@ -48,11 +52,19 @@ function pesquisarPokemon(){
                             });
                     });
             } else {
-                console.log("Pokémon não encontrado.");
+                criarCard('Nenhum Pokemon Encontrado', './assets/imagem/nonePokemon.png', '#')
             }
             
         });
+    paginas.style.display = 'none';
+    voltarbutton.style.display = 'flex';
 
+}
+
+function voltar(){
+    paginas.style.display = 'flex';
+    voltarbutton.style.display = 'none';
+    getPokemons();
 }
 
 function criarCard(nome, img, id){
@@ -66,9 +78,6 @@ function criarCard(nome, img, id){
         <div class='card-footer text-end'>ID: ${id}</div>`;
     cards.appendChild(card);
 }
-
-const proxPagina = document.getElementById('proxPagina');
-const voltPagina = document.getElementById('voltPagina');
 
 function passarPagina(){
     inicio+=50;

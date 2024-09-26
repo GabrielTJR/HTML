@@ -9,7 +9,7 @@
     <title>Pokemon</title>
 </head>
 <body>
-    <main class="container">
+    <main class="container justify-content-center">
         <div class="p-4 align-items-center justify-content-between" id="cabecalho">
             <img id="pokebola" src="./assets/imagem/pokemon.png">
             <h1>Lista de Pokemons:</h1>
@@ -21,10 +21,11 @@
         <div id="posts" class="card-container row justify-content-center">
 
         </div>
-        <div class="row">
+        <div id="paginas" class="row">
             <div class="col row justify-content-start"><button id="voltPagina" class="col-4 m-4" onclick="voltarPagina()">Voltar Página</button></div>
             <div class="col row justify-content-end"><button id="proxPagina" class="col-4 m-4" onclick="passarPagina()">Passsar Página</button></div>
         </div>
+        <div id="voltar" style="display: none;" class="col row justify-content-center"><button class="col-2" onclick="voltar()">Voltar</button></div>
     </main>
     <footer>
 
