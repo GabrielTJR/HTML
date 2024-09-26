@@ -1,10 +1,11 @@
-var pagina = 0;
+var pagina = 1;
 var inicio = 0;
 
 const cards = document.getElementById('posts');
 const proxPagina = document.getElementById('proxPagina');
 const voltPagina = document.getElementById('voltPagina');
 const paginas = document.getElementById('paginas');
+const atualPagina = document.getElementById('atualPagina');
 const voltarbutton = document.getElementById('voltar')
 
 function getPokemons() {
@@ -32,6 +33,7 @@ function getPokemons() {
                 });
             });
         });
+        atualPagina.innerText = `Página: ${pagina}`
 }
 
 function pesquisarPokemon(){
@@ -59,6 +61,12 @@ function pesquisarPokemon(){
     paginas.style.display = 'none';
     voltarbutton.style.display = 'flex';
 
+}
+
+function buscarPagina(){
+    pagina = parseInt(document.getElementById('paginaPesquisa').value);
+    inicio = (pagina-1)*50;
+    getPokemons();
 }
 
 function voltar(){
