@@ -41,14 +41,14 @@ h1 {
   display: none;
 }
 
-button{
+button, a{
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
   padding: 15px;
   border-radius: 50%;
   min-width: 80px;
 }
 
-button:active{
+button:active, a:active{
   box-shadow: 3px 3px 3px inset rgba(0, 0, 0, 0.425);
 }
 
