@@ -1,0 +1,30 @@
+header{
+    text-align: center;
+}
+
+main{
+    position: relative;
+    height: 90vh;
+}
+
+button{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#button1{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    background-image: url("./heart.png");
+    background-size: 120%;
+    background-position: center;
+}
+
+#button2{
+    right: 30%;
+}
