@@ -1,10 +1,10 @@
 const button1 = document.getElementById('button1')
 const button2 = document.getElementById('button2')
 const pergunta = document.getElementById('pergunta')
+const container = document.getElementById('main');
 let confirmadas = 0
 
 function posicionarBotao() {
-    const container = document.getElementById('main');
 
     // Tamanho do botão
     const botaoWidth = button2.offsetWidth;
@@ -32,7 +32,7 @@ function confirmar(){
             pergunta.innerText = "Absoluta?"
             break
         case 2:
-            pergunta.innerText = "Não é mentira?"
+            pergunta.innerText = "Verdade mesmo?"
             break
         case 3:
             pergunta.innerText = "Bastante?"
@@ -41,7 +41,10 @@ function confirmar(){
             pergunta.innerText = "Do fundo do coração?"
             break
         case 5:
-            pergunta.innerText = ""
+            pergunta.innerText = "O amor te ama muito mais!!!"
+            button1.style.display = 'none'
+            button2.style.display = 'none'
+            container.style.backgroundImage = 'url(./amores.jpg)'
             break
     }
     confirmadas++
