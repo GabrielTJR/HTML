@@ -52,4 +52,5 @@ function confirmar(){
     setTimeout(() => {
         header.style.backgroundColor = 'transparent';
     }, 500);
+    confirmadas++
 }
