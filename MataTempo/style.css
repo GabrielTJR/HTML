@@ -28,6 +28,10 @@ button{
     background-position: center;
 }
 
+#button1:active{
+    background-color: rgba(128, 128, 128, 0.11);
+}
+
 #button2{
     right: 30%;
 }
