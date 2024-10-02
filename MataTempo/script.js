@@ -2,6 +2,7 @@ const button1 = document.getElementById('button1')
 const button2 = document.getElementById('button2')
 const pergunta = document.getElementById('pergunta')
 const container = document.getElementById('main');
+const header = document.getElementById('header')
 let confirmadas = 0
 
 function posicionarBotao() {
@@ -47,5 +48,8 @@ function confirmar(){
             container.style.backgroundImage = 'url(./amores.jpg)'
             break
     }
-    confirmadas++
+    header.style.backgroundColor = 'gray';
+    setTimeout(() => {
+        header.style.backgroundColor = 'transparent';
+    }, 500);
 }
