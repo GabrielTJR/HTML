@@ -4,9 +4,10 @@ const valorGastos = document.getElementById('valorGastos')
 
 function adicionarGastos(){
     gasto = parseFloat(document.getElementById('gasto').value)
-    parecelas = 
-    gastos+= gasto;
-    valorGastos.innerText = `Valor ganho por mês: R$${gastos}`
+    var nomeGasto = document.getElementById('nomeGasto').value
+    var parcelas = parseInt(document.getElementById('parcelas').value)
+    gastos += {nome:nomeGasto, valor:gasto, parcelas:parcelas}
+    valorGastos.innerHTML += `Pagamento de ${nomeGasto}: R$${gasto}, durante ${parcelas} parcelas.<br>`
 }
 
 function adicionarGanhos(){
