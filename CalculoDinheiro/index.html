@@ -13,10 +13,13 @@
     <main>
         <div>
             <h2>Adicionar Ganhos</h2>
-            <input id="ganho" type="text" placeholder="Poupança"><br>
+            <input id="poupanca" type="text" placeholder="Poupança"><br>
+            <button onclick="adicionarPoupanca()">Adicionar</button>
+            <button onclick="limparPoupanca()">Limpar</button><br><br>
             <input id="ganho" type="text" placeholder="Valor mensal"><br>
             <button onclick="adicionarGanhos()">Adicionar</button>
             <button onclick="limparGanhos()">Limpar</button>
+            <p id="valorPoupanca"></p>
             <p id="valorGanhos"></p>
         </div>
         <div>

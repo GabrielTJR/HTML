@@ -1,0 +1,20 @@
+header{
+    text-align: center;
+}
+main{
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    background-color: #ddd;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+div{
+    margin: 20px;
+}
+
+input{
+    margin-bottom: 20px ;
+}
