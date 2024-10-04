@@ -41,6 +41,10 @@ h1 {
   display: none;
 }
 
+button{
+  margin-left: 10px;
+}
+
 button, a{
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
   padding: 15px;
