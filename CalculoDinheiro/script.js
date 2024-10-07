@@ -6,6 +6,7 @@ const valorTotal = document.getElementById('valorTotal')
 const dispMes = document.getElementById('dispMes')
 const resultadoDiv = document.getElementById('resultado')
 const btResultado = document.getElementById('btResultado')
+const tableTr = document.getElementById('tableTr')
 
 function adicionarPoupanca(){
     if(document.getElementById('poupanca').value == ''){
@@ -56,6 +57,32 @@ function gerarCalculo(){
         dispMes.innerText = `Total de R$${sobraMes} disponível para utilizar por mês durante ${maiorParcela} meses`
         btResultado.style.display = 'none'
         resultadoDiv.style.display = 'flex'
+
+        var gastoMes = [];
+        var sobras = [];
+        tableTr.innerHTML='';
+
+        for(var i=0; i<maiorParcela; i++){
+            gastoMes[i] = 0
+            gastos.forEach(gasto =>{
+                if(gasto.parcelas > i){
+                    gastoMes[i] += gasto.valor;
+                }
+            });
+            if(i==0){
+                sobras[i] = poupanca + ganhos - gastoMes[i];  
+                alert('teste')       
+            }else if(i>0){
+                sobras[i] = sobras[i-1] + ganho - gastoMes[i];
+            }
+            tableTr.innerHTML += `
+            <tr>
+                <td>${i+1}</td>
+                <td>${gastoMes[i]}</td>
+                <td>${sobras[i]}</td>
+            </tr>
+            `
+        }
     }
 }
 

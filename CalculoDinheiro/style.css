@@ -3,7 +3,8 @@
     margin: 0;
 }
 
-header{
+header{ 
+    padding: 20px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -25,6 +26,10 @@ h1{
     border-radius: 15px;
 }
 
+h2{
+    margin-bottom: 10px;
+}
+
 main{
     width: 50%;
     margin: 0 auto;
@@ -41,9 +46,13 @@ input{
     margin-bottom: 20px ;
     width: 100%;    
     box-sizing: border-box;
+    padding: 8px;
+    border-radius: 5px;
 }
 button{
     width: 45%;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .container{
@@ -64,7 +73,6 @@ button{
 #btResultado{
     margin: 20px;
     padding: 15px;
-    border-radius: 15px;
     background-color: #fff;
 }
 
@@ -82,4 +90,15 @@ button, input{
     text-align: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+table{
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 5px;
+    width: 250px;
 }
