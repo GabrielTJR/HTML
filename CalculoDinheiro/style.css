@@ -41,5 +41,16 @@ button{
     padding: 15px;
     border-radius: 15px;
     background-color: #fff;
+}
+
+input{
+    border: none;
+}
+
+button, input{    
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.18);
+}
+
+#resultado{
+    display: none;
 }

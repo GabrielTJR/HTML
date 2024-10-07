@@ -3,6 +3,8 @@ const valorPoupanca = document.getElementById('valorPoupanca')
 const valorGanhos = document.getElementById('valorGanhos')
 const valorGastos = document.getElementById('valorGastos')
 const valorTotal = document.getElementById('valorTotal')
+const dispMes = document.getElementById('dispMes')
+const resultadoDiv = document.getElementById('resultado')
 
 function adicionarPoupanca(){
     if(document.getElementById('poupanca').value == ''){
@@ -40,8 +42,17 @@ function adicionarGastos(){
     }
 }
 
-function gerarSobra(){
-
+function gerarCalculo(){
+    const btResultado = document.getElementById('btResultado')
+    const maiorParcela = gastos.reduce((acc, curr) => {
+        return (curr.parcelas > acc) ? curr.parcelas : acc;
+    }, 0);
+    alert(maiorParcela)
+    var dinheiroTotal = maiorParcela*ganho + poupanca;
+    var sobraMes = (dinheiroTotal-totalPagar)/maiorParcela;
+    dispMes.innerText = `Total de R$${sobraMes} disponível para utilizar por mês durante ${maiorParcela} meses`
+    btResultado.style.display = 'none'
+    resultadoDiv.style.display = 'block'
 }
 
 function limparPoupanca(){
