@@ -4,6 +4,7 @@ header{
 main{
     width: 50%;
     margin: 0 auto;
+    padding: 20px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -53,4 +54,8 @@ button, input{
 
 #resultado{
     display: none;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

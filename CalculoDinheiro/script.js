@@ -5,6 +5,7 @@ const valorGastos = document.getElementById('valorGastos')
 const valorTotal = document.getElementById('valorTotal')
 const dispMes = document.getElementById('dispMes')
 const resultadoDiv = document.getElementById('resultado')
+const btResultado = document.getElementById('btResultado')
 
 function adicionarPoupanca(){
     if(document.getElementById('poupanca').value == ''){
@@ -43,16 +44,24 @@ function adicionarGastos(){
 }
 
 function gerarCalculo(){
-    const btResultado = document.getElementById('btResultado')
-    const maiorParcela = gastos.reduce((acc, curr) => {
-        return (curr.parcelas > acc) ? curr.parcelas : acc;
-    }, 0);
-    alert(maiorParcela)
-    var dinheiroTotal = maiorParcela*ganho + poupanca;
-    var sobraMes = (dinheiroTotal-totalPagar)/maiorParcela;
-    dispMes.innerText = `Total de R$${sobraMes} disponível para utilizar por mês durante ${maiorParcela} meses`
-    btResultado.style.display = 'none'
-    resultadoDiv.style.display = 'block'
+    if(totalPagar == null || poupanca == null || ganho == null){
+        alert("Valores não informados")
+        return 0
+    }else{
+        const maiorParcela = gastos.reduce((acc, curr) => {
+            return (curr.parcelas > acc) ? curr.parcelas : acc;
+        }, 0);
+        var dinheiroTotal = maiorParcela*ganho + poupanca;
+        var sobraMes = (dinheiroTotal-totalPagar)/maiorParcela;
+        dispMes.innerText = `Total de R$${sobraMes} disponível para utilizar por mês durante ${maiorParcela} meses`
+        btResultado.style.display = 'none'
+        resultadoDiv.style.display = 'flex'
+    }
+}
+
+function voltar(){
+    btResultado.style.display = 'block'
+    resultadoDiv.style.display = 'none'
 }
 
 function limparPoupanca(){
@@ -66,6 +75,7 @@ function limparGanhos(){
 }
 
 function limparGastos(){
-    gastos=0;
+    gastos=[];
     valorGastos.innerText =''
+    valorTotal.innerText =''
 }
