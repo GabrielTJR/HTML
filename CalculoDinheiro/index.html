@@ -11,25 +11,43 @@
         <h1>Calculadora de Gastos/Ganhos</h1>
     </header>
     <main>
-        <div>
-            <h2>Adicionar Ganhos</h2>
-            <input id="poupanca" type="text" placeholder="Poupança"><br>
-            <button onclick="adicionarPoupanca()">Adicionar</button>
-            <button onclick="limparPoupanca()">Limpar</button><br><br>
-            <input id="ganho" type="text" placeholder="Valor mensal"><br>
-            <button onclick="adicionarGanhos()">Adicionar</button>
-            <button onclick="limparGanhos()">Limpar</button>
-            <p id="valorPoupanca"></p>
-            <p id="valorGanhos"></p>
+        <div class="container">
+            <div class="box">
+                <h2>Adicionar Ganhos</h2>
+                <input id="poupanca" type="text" placeholder="Poupança"><br>
+                <div class="botoes">
+                    <button onclick="adicionarPoupanca()">Adicionar</button>
+                    <button onclick="limparPoupanca()">Limpar</button>
+                </div>
+                <br>
+                <input id="ganho" type="text" placeholder="Valor mensal"><br>
+                <div class="botoes">
+                    <button onclick="adicionarGanhos()">Adicionar</button>
+                    <button onclick="limparGanhos()">Limpar</button>
+                </div>
+                <p id="valorPoupanca"></p>
+                <p id="valorGanhos"></p>
+            </div>
         </div>
-        <div>
-            <h2>Adicionar Gastos</h2>
-            <input id="nomeGasto" type="text" placeholder="Descrição do gasto"><br>
-            <input id="gasto" type="text" placeholder="Valor da parcela"><br>
-            <input id="parcelas" type="number" placeholder="Quantidade de parcelas"><br>
-            <button onclick="adicionarGastos()">Adicionar</button>
-            <button onclick="limparGastos()">Limpar</button>
-            <p id="valorGastos"></p>
+        <div class="container">
+            <div class="box">
+                <h2>Adicionar Gastos</h2>
+                <input id="nomeGasto" type="text" placeholder="Descrição do gasto"><br>
+                <input id="gasto" type="text" placeholder="Valor da parcela"><br>
+                <input id="parcelas" type="number" placeholder="Quantidade de parcelas"><br>
+                <div class="botoes">
+                    <button onclick="adicionarGastos()">Adicionar</button>
+                    <button onclick="limparGastos()">Limpar</button>
+                </div>
+                <p id="valorGastos"></p>
+                <p id="valorTotal"></p>
+            </div>
+        </div>
+        <div class="container">
+            <button id="btResultado" onclick="gerarCalculo()">Gerar calculo de valores</button>
+            <div id="resultado">
+
+            </div>
         </div>
     </main>
     <script src="script.js"></script>

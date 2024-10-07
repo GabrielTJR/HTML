@@ -1,7 +1,8 @@
-var gastos=[], ganhos=0, sobra, poupanca=0, ganho;
+var gastos=[], ganhos=0, sobra, poupanca=0, ganho, totalPagar, gasto;
 const valorPoupanca = document.getElementById('valorPoupanca')
 const valorGanhos = document.getElementById('valorGanhos')
 const valorGastos = document.getElementById('valorGastos')
+const valorTotal = document.getElementById('valorTotal')
 
 function adicionarPoupanca(){
     if(document.getElementById('poupanca').value == ''){
@@ -29,11 +30,13 @@ function adicionarGastos(){
     if(nomeGasto == '' || document.getElementById('parcelas').value == '' || document.getElementById('gasto').value == ''){
         alert("Preencha todas as informações")
     }else{
-        gastos += {nome:nomeGasto, valor:gasto, parcelas:parcelas}
-        valorGastos.innerHTML += `Pagamento de ${nomeGasto}: R$${gasto}, ${parcelas}x.<br>`
-        gastos.forEach((nome, valor, parcelas)=>{
-            
+        gastos.push({nome:nomeGasto, valor:gasto, parcelas:parcelas})
+        valorGastos.innerHTML += `${nomeGasto}: R$${gasto}, ${parcelas}x.<br>`
+        totalPagar=0;
+        gastos.forEach(parcela=>{
+            totalPagar += parcela.valor*parcela.parcelas;
         });
+        valorTotal.innerText = `Total a pagar: R$${totalPagar}`
     }
 }
 
