@@ -70,8 +70,7 @@ function gerarCalculo(){
                 }
             });
             if(i==0){
-                sobras[i] = poupanca + ganhos - gastoMes[i];  
-                alert()      
+                sobras[i] = poupanca + ganhos - gastoMes[i];
             }else if(i>0){
                 sobras[i] = sobras[i-1] + ganho - gastoMes[i];
             }
