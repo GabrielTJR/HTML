@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html{    
+    overflow: hidden;
+}
+
 @media(max-width: 768px){
     *{        
         font-size: 3.5vw;

@@ -53,7 +53,7 @@ function gerarCalculo(){
             return (curr.parcelas > acc) ? curr.parcelas : acc;
         }, 0);
         var dinheiroTotal = maiorParcela*ganho + poupanca;
-        var sobraMes = (dinheiroTotal-totalPagar)/maiorParcela;
+        var sobraMes = ((dinheiroTotal-totalPagar)/maiorParcela).toFixed(2);
         dispMes.innerText = `Total de R$${sobraMes} disponível para utilizar por mês durante ${maiorParcela} meses`
         btResultado.style.display = 'none'
         resultadoDiv.style.display = 'flex'
