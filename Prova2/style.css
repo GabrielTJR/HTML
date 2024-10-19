@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #151d27;
+}
+
+header div{
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+body{    
+    background-image: linear-gradient(180deg,#1c516f, #151d27);
+}
+
+main{
+    width: 60vw;
+}
+
+.form-select{
+    border-radius: 0;
+    background-color: #151d27;
+    color: #96a6b7;
+    border-color: rgba(128, 128, 128, 0.39);
+}
+
+.card{
+    background-color: #263241;
+    color: #96a6b7;
+}
+
+.card-footer{
+    background-color: #384657;
+    color: white;
+}
+
+.card-footer:hover{
+    background-color: rgb(194, 66, 66);
+}
+
+.page-link{
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
+
+.container{
+    color: white;
+}
+
+footer{
+    background-color: #020612;
+}
+
+footer p{
+    color: #8594a4;
+}
