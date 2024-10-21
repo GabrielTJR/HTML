@@ -12,7 +12,7 @@ function loadSelect(){
     for(i=0; i<7; i++){
         select.innerHTML += 
         `<select class="p-3 col form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
+            <option selected>Select</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
