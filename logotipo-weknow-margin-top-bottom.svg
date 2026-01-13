@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="312" height="95" viewBox="0 0 312 95">
+  <defs>
+    <clipPath id="clip-logotipo_margen_sup_e_inf">
+      <rect width="312" height="95"/>
+    </clipPath>
+  </defs>
+  <g id="logotipo_margen_sup_e_inf" data-name="logotipo margen sup e inf" clip-path="url(#clip-logotipo_margen_sup_e_inf)">
+    <g id="Camada_1-2" transform="translate(4.148 29.152)">
+      <g id="Grupo_315" data-name="Grupo 315" transform="translate(-4.148 -4.152)">
+        <g id="Grupo_313" data-name="Grupo 313" transform="translate(65.707 1.766)">
+          <path id="Caminho_2627" data-name="Caminho 2627" d="M233.5,44.162,227,17.26l-6.5,26.9H208.79L196.5,1.24h12.094l6.5,27.983L222.757,1.24h8.495l7.663,27.983L245.677,1.24h11.828L245.212,44.165H233.5Z" transform="translate(-196.5 -1.24)" fill="#1e1e26"/>
+          <path id="Caminho_2628" data-name="Caminho 2628" d="M388.951,32.68c9.2,0,15.9,6.756,15.9,17.31v2.125H382.709c.58,2.895,3.281,5.534,7.915,5.534a12.3,12.3,0,0,0,7.594-2.639L402.4,61.19c-3.088,2.767-8.236,4.12-13,4.12-9.588,0-16.989-6.242-16.989-16.347,0-9.009,6.821-16.282,16.541-16.282Zm-6.373,13h12.807c-.259-2.188-1.867-5.341-6.435-5.341A6.141,6.141,0,0,0,382.578,45.681Z" transform="translate(-314.804 -22.384)" fill="#1e1e26"/>
+          <path id="Caminho_2629" data-name="Caminho 2629" d="M501.171,44.162l-6.821-11-2.96,3.54v7.466H481.48V1.24h9.909V25.5l9.461-14.058h11.969L501.364,27.235,513.4,44.159H501.171Z" transform="translate(-388.157 -1.24)" fill="#1e1e26"/>
+          <path id="Caminho_2630" data-name="Caminho 2630" d="M604.91,64.882V45.945c0-3.8-1.994-5.148-5.082-5.148a7.455,7.455,0,0,0-6.048,3.026v21.06H583.87V32.165h9.909v4.454a14.052,14.052,0,0,1,10.748-4.568c7.08,0,10.3,4.12,10.3,9.847V64.889h-9.909Z" transform="translate(-457.017 -21.961)" fill="#1e1e26"/>
+          <path id="Caminho_2631" data-name="Caminho 2631" d="M689.19,48.962c0-8.753,6.373-16.282,16.924-16.282S723.1,40.209,723.1,48.962,716.8,65.309,706.114,65.309,689.19,57.715,689.19,48.962Zm23.748,0c0-4.12-2.446-7.529-6.821-7.529s-6.694,3.412-6.694,7.529,2.381,7.594,6.694,7.594S712.938,53.144,712.938,48.962Z" transform="translate(-527.847 -22.384)" fill="#1e1e26"/>
+          <path id="Caminho_2632" data-name="Caminho 2632" d="M823.112,65.111l-5.855-19.242-5.793,19.242H800.782l-9.2-32.721h10.168l5.02,20.687,6.114-20.687H821.7l6.114,20.687,4.955-20.687H843l-9.2,32.721H823.116Z" transform="translate(-596.707 -22.189)" fill="#1e1e26"/>
+        </g>
+        <g id="Grupo_314" data-name="Grupo 314" transform="translate(0 0)">
+          <path id="Caminho_2633" data-name="Caminho 2633" d="M3.275,0H21.623V21.626H3.275A3.276,3.276,0,0,1,0,18.352V3.275A3.276,3.276,0,0,1,3.275,0Z" transform="translate(15.292 0) rotate(45)" fill="#36c"/>
+          <path id="Caminho_2634" data-name="Caminho 2634" d="M3.275,0H18.348a3.276,3.276,0,0,1,3.275,3.275V21.623H0V3.275A3.276,3.276,0,0,1,3.275,0Z" transform="translate(45.874 0.002) rotate(45)" fill="#5adbdb"/>
+          <path id="Caminho_2635" data-name="Caminho 2635" d="M0,0H21.623V18.348a3.276,3.276,0,0,1-3.275,3.275H0V0Z" transform="translate(30.582 15.294) rotate(45)" fill="#30a7e2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
